@@ -2,11 +2,13 @@
 <manifest>
   <remote  name="aosp" fetch="https://android.googlesource.com/" review="https://android-review.googlesource.com/" />
   <remote  name="origin" fetch="https://github.com/ksu4rmx3834/" />
+  <remote  name="ksun" fetch="https://github.com/KernelSU-Next/" />
   <default revision="master-kernel-build-2021" remote="aosp" sync-j="4"  />
 
   <project path="common" name="common" remote="origin" revision="master" />
   <project path="mkbootimg" name="mkbootimg" remote="origin" revision="master" />
   <project path="mkanykernel" name="mkanykernel" remote="origin" revision="master" />
+  <project path="KernelSU" name="KernelSU-Next" remote="ksun" revision="refs/tags/v3.2.0-legacy" />
 
   <project path="build" name="kernel/build" clone-depth="1" />
   <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" />
