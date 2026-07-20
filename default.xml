@@ -5,6 +5,7 @@
   <default revision="master-kernel-build-2021" remote="aosp" sync-j="4"  />
 
   <project path="common" name="common" remote="origin" revision="master" />
+  <project path="mkbootimg" name="mkbootimg" remote="origin" revision="master" />
 
   <project path="build" name="kernel/build" clone-depth="1" />
   <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" />
