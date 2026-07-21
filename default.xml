@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote  name="aosp" fetch="https://android.googlesource.com/" review="https://android-review.googlesource.com/" />
-  <remote  name="origin" fetch="https://github.com/ksu4rmx3834/" />
-  <remote  name="ksun" fetch="https://github.com/KernelSU-Next/" />
-  <default revision="master-kernel-build-2021" remote="aosp" sync-j="4"  />
-
-  <project path="common" name="common" remote="origin" revision="master" />
-  <project path="mkbootimg" name="mkbootimg" remote="origin" revision="master" />
-  <project path="mkanykernel" name="mkanykernel" remote="origin" revision="master" />
-  <project path="KernelSU" name="KernelSU-Next" remote="ksun" revision="refs/tags/v3.2.0-legacy" />
-
-  <project path="build" name="kernel/build" clone-depth="1" />
-  <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" />
-  <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" />
-  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" />
-  <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" revision="master" clone-depth="1" />
-  <project path="tools/avbtool" name="platform/external/avb" revision="master" clone-depth="1" />
+  <remote name="aosp" fetch="https://android.googlesource.com/" review="https://android-review.googlesource.com/"/>
+  <remote name="ksun" fetch="https://github.com/KernelSU-Next/"/>
+  <remote name="origin" fetch="https://github.com/ksu4rmx3834/"/>
+  
+  <default remote="aosp" revision="master-kernel-build-2021" sync-j="4"/>
+  
+  <project name="KernelSU-Next" path="KernelSU" remote="ksun" revision="9b08e88862000d5c50fb2e43a5b75123cf472e54" upstream="refs/tags/v3.2.0-legacy" dest-branch="refs/tags/v3.2.0-legacy"/>
+  <project name="common" remote="origin" revision="31e51614b39b97865fe9e84e6543651c9f9690ae" upstream="master" dest-branch="master"/>
+  <project name="kernel/build" path="build" revision="dbfab7e0de2e04316b526ef938b1140d7a5fd40d" upstream="master-kernel-build-2021" dest-branch="master-kernel-build-2021" clone-depth="1"/>
+  <project name="kernel/prebuilts/build-tools" path="prebuilts/kernel-build-tools" revision="ca5b087f88c0302ff66f59a6f26be663e92baf15" upstream="master-kernel-build-2021" dest-branch="master-kernel-build-2021" clone-depth="1"/>
+  <project name="mkanykernel" remote="origin" revision="f72e66ecc80f93e944e637a3c3ed8bcde22539bd" upstream="master" dest-branch="master"/>
+  <project name="mkbootimg" remote="origin" revision="57787e257fe7f4dfde6f64a021d6194611526d90" upstream="master" dest-branch="master"/>
+  <project name="platform/external/avb" path="tools/avbtool" revision="761178607206f4cb2af79ed9eec52d8cbd814adb" upstream="master" dest-branch="master" clone-depth="1"/>
+  <project name="platform/prebuilts/build-tools" path="prebuilts/build-tools" revision="cfedc16ec3deb680fca6fe2aff44a1837a97b50d" upstream="master-kernel-build-2021" dest-branch="master-kernel-build-2021" clone-depth="1"/>
+  <project name="platform/prebuilts/clang/host/linux-x86" path="prebuilts-master/clang/host/linux-x86" revision="6e3223f76384455acde43affde3df0ea9df66c0d" upstream="master-kernel-build-2021" dest-branch="master-kernel-build-2021" clone-depth="1"/>
+  <project name="platform/system/tools/mkbootimg" path="tools/mkbootimg" revision="d2bb0af5ba6d3198a3e99529c97eda1be0b5a093" upstream="master" dest-branch="master" clone-depth="1"/>
 </manifest>
